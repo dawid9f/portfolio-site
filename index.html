@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dawid Florian</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+            body {
+                color: #EEEEEE;
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+            }
+
+            .bg-my1 {
+                background: #222831;
+            }
+
+            .bg-my2 {
+                background: #393E46;
+            }
+
+            .bg-my3 {
+                background: #FFD369;
+            }
+
+            .bg-my4 {
+                background: #EEEEEE;
+            }
+
+            .text-my1 {
+                color: #222831;
+            }
+
+            .text-my2 {
+                color: #393E46;
+            }
+
+            .text-my3 {
+                color: #FFD369;
+            }
+
+            .text-my4 {
+                color: #EEEEEE;
+            }
+            
+            .row{
+                margin: 0px;
+            }
+
+            .border-top-my3 {
+                border-top: 1px solid #FFD369;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .btnlink {
+                background: #393E46;
+                color: #EEEEEE;
+            }
+
+            .btnlink:hover {
+                background: #FFD369;
+                color: #222831;
+            }
+
+            #bbnav {
+                bottom: 55px;
+                right: 30px;
+            }
+        </style>
+        <script type="text/javascript">
+            function footer() {
+                const date = new Date();
+                const h = date.getHours();
+                const m = date.getMinutes();
+                const dd = date.getDate();
+                const mm = date.getMonth()+1;
+                const yy = date.getFullYear();
+                const str = ""+h+((m<10)?":0":":")+m+" "+dd+((mm<10)?".0":".")+mm+"."+yy;
+                document.getElementById("fot").innerHTML = str;
+                setTimeout("footer()", 30000);
+            }
+
+            function offcanvashidenav() {
+                setTimeout(function(){ 
+                    document.getElementById('bbnav').click(); }, 1000);
+            }
+
+        </script>
+    </head>
+    <body onload="footer()">
+        <!-- Mały przycisk do menu mobilnego -->
+        <button class="btn bg-my3 d-lg-none position-fixed bbnav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="bbnav">
+            Menu
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </button>
+
+        <nav class="offcanvas offcanvas-start bg-my3 text-my1" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <header class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Dawid Florian</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </header>
+            <article class="offcanvas-body">
+              <section>
+                <!-- Menu phone -->
+                <a href="#Zainteresowania" onclick="offcanvashidenav()">Zainteresowania</a>
+                <a href="#Kontakt" onclick="offcanvashidenav()">Kontakt</a>
+            </section>
+            </article>
+        </nav>
+        <main class="container-flex">
+            <article class="row">
+                <aside class="d-none d-lg-block col-3">
+                    <nav class="col-3 fixed-top h-100 bg-my3 text-my1 text-center">
+                        <!-- Menu pc -->
+                        <a href="#Kontakt">Kontakt</a>
+                    </nav>
+                </aside>
+                <section class="col-12 col-lg-9 bg-my1 text-my4">
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-5">a</article>
+                    <article class="row p-1" id="Zainteresowania">
+                        <header class="col-12 p-1 text-center">
+                            <h2 class="text-my3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-bicycle" viewBox="0 1 16 16">
+                                    <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
+                                </svg>
+                                Czas na odpoczynek
+                            </h2>
+                            <hr class="text-my3"/>
+                        </header>
+                    </article>
+
+
+
+
+
+
+
+
+                    <article class="row p-1" id="Kontakt">
+                        <header class="col-12 p-1 text-center">
+                            <h2 class="text-my3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-envelope" viewBox="0 1 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                </svg>
+                                Skontaktuj się ze mną
+                            </h2>
+                            <hr class="text-my3"/>
+                        </header>
+                        <section class="col-md-8 p-1 text-center">
+                            <p><b>Dane kontaktowe</b></p>
+                            <p>
+                                <text class="text-my3">E-mail </text>: dawidflorian99@gmail.com
+                                <text class="text-my3"><br />Telefon </text>: 532 645 060
+                            </p>
+                        </section>
+                        <section class="col-md-4 text-center">
+                            <div class="pt-md-1 pb-5 pb-lg-0">
+                                <a href="https://github.com/dawid9f?tab=repositories" target="_blank">
+                                    <div class="p-1 m-2 btnlink">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-github" viewBox="0 0 16 19">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                        </svg>
+                                        Github
+                                    </div>
+                                </a>
+                                <a href="https://www.facebook.com/dawid.florian.3/" target="_blank">
+                                    <div class="p-1 m-2 btnlink">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 19">
+                                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                        </svg>
+                                        Facebook
+                                    </div>
+                                </a>
+                            </div>
+                        </section>
+                    </article>
+
+
+
+
+                    <footer class="row p-2 border-top-my3">
+                        <section class="col-4">
+                                dawidflorian.eu
+                        </section>
+                        <section class="col-8" style="text-align: right;" id="fot"></section>
+                    </footer>
+                </section>
+            </article>
+        </main>
+        <script src="js/bootstrap.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>
