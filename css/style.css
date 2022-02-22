@@ -64,7 +64,3 @@ a {
     bottom: 55px;
     right: 30px;
 }
-
-#img:hover {
-    filter: brightness(50%);
-}
