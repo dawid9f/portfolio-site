@@ -71,19 +71,4 @@ a {
     background-size: auto;
     background-attachment: fixed;
     background-position: right bottom;
-    -webkit-background-attachment:fixed;
-    -moz-background-attachment:fixed;
-
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed !important;
-    position: static !important;
-    z-index: -1 !important;
-    backface-visibility: hidden;
-    transform: translate3d(0,0,0);
--webkit-transform: translate3d(0,0,0);
 }
-
-.wpv-parallax-bg-img { overflow-y: scroll !important; }
