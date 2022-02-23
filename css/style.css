@@ -66,9 +66,9 @@ a {
 }
 
 #Zainteresowania {
-    background-image: url('/img/1.png');
+    background-image: url('/1.png');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto;
     background-attachment: fixed;
     background-position: right bottom;
 }
