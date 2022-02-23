@@ -81,4 +81,9 @@ a {
     background-attachment: fixed !important;
     position: static !important;
     z-index: -1 !important;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
+-webkit-transform: translate3d(0,0,0);
 }
+
+.wpv-parallax-bg-img { overflow-y: scroll !important; }
