@@ -64,11 +64,3 @@ a {
     bottom: 55px;
     right: 30px;
 }
-
-#Zainteresowania {
-    background-image: url('/1.png');
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-attachment: fixed;
-    background-position: right bottom;
-}
