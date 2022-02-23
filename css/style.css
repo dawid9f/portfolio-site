@@ -71,4 +71,6 @@ a {
     background-size: auto;
     background-attachment: fixed;
     background-position: right bottom;
+    -webkit-background-attachment:fixed;
+    -moz-background-attachment:fixed;
 }
