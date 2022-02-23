@@ -66,6 +66,7 @@ a {
 }
 
 #Zainteresowania {
+    text-align: center;
     background-image: url('/1.png');
     background-repeat: no-repeat;
     background-size: auto;
