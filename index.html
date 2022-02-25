@@ -34,10 +34,25 @@
                 background-attachment: fixed;
                 background-position: right bottom;
             }
+
+            #SRSK {
+                background-image: url('/img/a.png');
+                background-repeat: no-repeat;
+                background-size: 43%;
+                background-attachment: fixed;
+                background-position: right top;
+            }
+
+            #Portflio {
+                background-image: url('/img/codea.PNG');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-attachment: fixed;
+                background-position: right top;
+            }
         </style>
     </head>
     <body onload="footer()">
-        <!-- Mały przycisk do menu mobilnego -->
         <button class="btn bg-my3 d-lg-none position-fixed bbnav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="bbnav">
             Menu
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
@@ -54,56 +69,87 @@
             <article class="offcanvas-body">
               <section>
                 <!-- Menu phone -->
-                <a href="#Zainteresowania" onclick="offcanvashidenav()">Zainteresowania</a>
-                <a href="#Kontakt" onclick="offcanvashidenav()">Kontakt</a>
-            </section>
+                <header>
+                    <img src="/img/1p.png" class="img-fluid" alt="my">
+                </header>
+                <nav class="nav flex-column pt-5 text-center">
+                    <a class="nav-link" href="#" onclick="offcanvashidenav()">Start</a>
+                    <a class="nav-link" href="#Projekty" onclick="offcanvashidenav()">Projekty</a>
+                    <a class="nav-link" href="#Zainteresowania" onclick="offcanvashidenav()">Zainteresowania</a>
+                    <a class="nav-link" href="#Kontakt" onclick="offcanvashidenav()">Kontakt</a>
+                </nav>
+                </section>
             </article>
         </nav>
         <main class="container-flex">
             <article class="row">
                 <aside class="d-none d-lg-block col-3">
-                    <nav class="col-3 fixed-top h-100 bg-my3 text-my1 text-center">
-                        <!-- Menu pc -->
-                        <a href="#Kontakt">Kontakt</a>
-                        <a href="#Zainteresowania">Zao</a>
-                        <a href="#Kontakt">Kontakt</a>
+                    <nav class="col-3 fixed-top h-100 bg-my3 text-my1 text-center p-5">
+                        <h2 class="h1 pt-3">Dawid Florian</h2>
+                        <header>
+                            <img src="/img/1p.png" class="img-fluid" alt="my">
+                        </header>
+                        <nav class="nav flex-column pt-5">
+                            <a class="nav-link" href="#">Start</a>
+                            <a class="nav-link" href="#Projekty">Projekty</a>
+                            <a class="nav-link" href="#Zainteresowania">Zainteresowania</a>
+                            <a class="nav-link" href="#Kontakt">Kontakt</a>
+                        </nav>
                     </nav>
                 </aside>
                 <section class="col-12 col-lg-9 bg-my1 text-my4">
+                    
                     <article class="row p-5">a</article>
                     <article class="row p-5">a</article>
                     <article class="row p-5">a</article>
                     <article class="row p-5">a</article>
                     <article class="row p-5">a</article>
                     <article class="row p-5">a</article>
-                    <article class="row p-5">a</article>
-                    <article class="row p-5">a</article>
-                    <article class="row p-5">a</article>
-                    <article class="row p-5">a</article>
-                    <article class="row p-5">a</article>
-                    <article class="row p-5">a</article>
-                    <article class="row p-1 text-center">
+
+
+
+
+                    <article class="row p-1 m-1" id="Projekty">
                         <header class="col-12 p-1 text-center">
                             <h2 class="text-my3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-window" viewBox="0 1 16 16">
                                     <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
                                     <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm13 2v2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 14a1 1 0 0 1-1-1V6h14v7a1 1 0 0 1-1 1H2z"/>
                                   </svg>
-                                Ostatnio ukończone projekty
+                                Ostatnie projekty
                             </h2>
                             <hr class="text-my3"/>
                         </header>
-                        <section class="col-6">
-                            <h3>System rezerwacji</h3>
-                            <p>dsfdsf sdfsdfdsf sdfsdf</p>
+                        <section class="col-12 p-0" id="SRSK">
+                            <section class="col-12 col-xl-5 col-xxl-5 p-3 p-xxl-4 bg-my1">
+                                <header><h2><text class="text-my3">System rezerwacji</text> sali konferencyjnych</h2></header>
+                                <p>System umożliwia sprawne rejestrowanie użytkowników, przegląd sali i budynków, twożenie rezerwacji oraz posiada inne niezbędne do funkcjonowania firmy funkcjonalności.</p>
+                                <p>Dla pracowników stwożony jest specjalny <text class="text-my3">panel administracyjny.</text></p>
+                                <p>Aplikacja napisana w technologi <text class="text-my3">.NET CORE (C#)</text> według wzorca <text class="text-my3">MVC</text>. Dane zbierane są w bazie <text class="text-my3">MS SQL</text>.</p>
+                                <p>Front-end aplikacji opiera się na bibliotece <text class="text-my3">Bootstrap</text>, pozwalającej tworzyc <text class="text-my3">responsywne witryny.</text></p>
+                                <p><a class="text-my1 bg-my3 rounded p-1" href="https://github.com/dawid9f/booking-conference-rooms" target="_blank">GitHub</a></p>
+                            </section>
+                            <section class="d-xl-none col-12 p-0">
+                                <img src="img/aa.png" class="img-fluid" alt="site" id="img">
+                            </section>
                         </section>
-                        <section class="col-6">
-                            <h3>Potrfolio programisty</h3>
-                            <p>dsfsdfds sdfdsf dsfdsfs</p>
+                        <section class="col-12 row p-0" id="Portflio">
+                            <section class="col-7"></section>
+                            <section class="col-12 col-xl-5 col-xxl-5 p-3 p-xxl-4 bg-my1 text-right">
+                                <header class="pt-2"><h2><text class="text-my3">Responsywne</text> portfolio</h2></header>
+                                <p>Prosta, przejżysta i dopasowana każdego użądzenia witryna, zawierająca <text class="text-my3">portfolio</text>.</p>
+                                <p>Celem projektu było stwożenie <text class="text-my3">lekkiej</text> oraz sprawnie działającej strony.</p>
+                                <p>Portfolio dzięki zastosowaniu biblioteki <text class="text-my3">Bootstrap</text> w wersji 5 jest w pełni responsywne.</p>
+                                <p>Strona jest cały czas rozwijana.</p>
+                                <p><a class="text-my1 bg-my3 rounded p-1" href="https://github.com/dawid9f/portfolio-site" target="_blank">GitHub</a></p>
+                            </section>
+                            <section class="d-xl-none col-12 p-0">
+                                <img src="img/code.PNG" class="img-fluid" alt="site" id="img">
+                            </section>
                         </section>
                     </article>
                     <article class="row m-1" id="Zainteresowania">
-                        <header class="col-12 p-1 bg-my1 text-center">
+                        <header class="col-12 p-3 bg-my1 text-center">
                             <h2 class="text-my3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-bicycle" viewBox="0 1 16 16">
                                     <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
@@ -149,7 +195,7 @@
                                         Github
                                     </div>
                                 </a>
-                                <a href="/CV_DEV.pdf" target="_blank">
+                                <a href="/CV.pdf" target="_blank">
                                     <div class="p-1 m-2 btnlink">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-person-fill" viewBox="0 0 16 19">
                                             <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z"/>
