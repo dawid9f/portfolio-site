@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Portfolio Programisty" />
+        <meta name="keywords" content="Dawid Florian, Portfolio, Programowanie" />
+        <meta name="author" content="Dawid Florian" />
         <title>Dawid Florian</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript">
@@ -18,43 +22,35 @@
                 const str = ""+h+((m<10)?":0":":")+m+" "+dd+((mm<10)?".0":".")+mm+"."+yy;
                 document.getElementById("fot").innerHTML = str;
                 setTimeout("footer()", 30000);
+                pizza();
             }
 
             function offcanvashidenav() {
                 setTimeout(function(){ 
                     document.getElementById('bbnav').click(); }, 1000);
             }
+
+            function pizza() {
+                let now = new Date();
+                const nowYear = now.getFullYear();
+                let pizzaDay = new Date("9 February 2020 0:00:00");
+                pizzaDay.setFullYear(nowYear);
+
+                pizzaDay = (Date.parse(pizzaDay) / 1000);
+                now = (Date.parse(now) / 1000);
+
+                let timeLeft = pizzaDay - now;
+
+                if(timeLeft < 0) {
+                    pizzaDay = new Date("9 February 2020 0:00:00");
+                    pizzaDay.setFullYear(nowYear+1);
+                    pizzaDay = (Date.parse(pizzaDay) / 1000);
+                    timeLeft = pizzaDay - now;
+                }
+                var days = Math.floor(timeLeft / 86400);
+                document.getElementById('pizzaD').innerHTML=days;
+            }
         </script>
-
-        <style>
-            #Zainteresowania {
-                background-image: url('/img/1.png');
-                background-repeat: no-repeat;
-                background-size: 60%;
-                background-attachment: fixed;
-                background-position: right bottom;
-            }
-
-            #SRSK {
-                background-image: url('/img/a.png');
-                background-repeat: no-repeat;
-                background-size: 43%;
-                background-attachment: fixed;
-                background-position: right top;
-            }
-
-            #Portflio {
-                background-image: url('/img/codea.png');
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-attachment: fixed;
-                background-position: right top;
-            }
-
-            .nav-link:hover {
-                color: #EEEEEE;
-            }
-        </style>
     </head>
     <body onload="footer()">
         <button class="btn bg-my3 d-lg-none position-fixed bbnav" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="bbnav">
@@ -103,34 +99,33 @@
                     </nav>
                 </aside>
                 <section class="col-12 col-lg-9 bg-my1 text-my4">
-                    <article class="row" id="Omnie">
+                    <article class="row p-5" id="Omnie">
                         <header class="col-12 p-1 text-center">
                             <h2 class="text-my3">
-                                O mnie
+                                Cześć, jestem Dawid
                             </h2>
                             <hr class="text-my3"/>
                         </header>
-                        <section class="col-md-6 p-1 text-center">
-                            <p><h3><b>Dane kontaktowe</b></h3></p>
+                        <section class="col-xl-8 p-5 text-center">
+                            <p><h3><b>Witaj na mojej witrynie !</b></h3></p>
                             <p>
-                                <text class="text-my3">E-mail </text>: dawidflorian99@gmail.com
-                                <text class="text-my3"><br />Telefon </text>: 532 645 060
+                                Znajdziesz tu informacje o mnie, czym się zajmuję oraz interesuję.
+                            </p>
+                            <p>
+                                Oraz że dzień pizzy będzie za <text class="text-my3" id="pizzaD">0</text> dni.
                             </p>
                         </section>
-                        <section class="col-md-6 p-1 text-center">
-                            <p><h3><b>Dane kontaktowe</b></h3></p>
+                        <section class="col-xl-4 p-5 text-center bg-my2 text-my3">
+                            <p><h3><b>Kilka faktów o mnie</b></h3></p>
                             <p>
-                                <text class="text-my3">E-mail </text>: dawidflorian99@gmail.com
-                                <text class="text-my3"><br />Telefon </text>: 532 645 060
+                                Nazywam się Dawid Florian mam 22 lata i jestem studentem.
+                            </p>
+                            <p>
+                                Ciągle poznaje nowe technologie programowania, oraz staram się rozwijać w tym kierunku.
                             </p>
                         </section>
                     </article>
-
-
-
-
-
-                    <article class="row p-1 m-1" id="Projekty">
+                    <article class="row p-5 m-1" id="Projekty">
                         <header class="col-12 p-1 text-center">
                             <h2 class="text-my3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-window" viewBox="0 1 16 16">
@@ -169,30 +164,39 @@
                             </section>
                         </section>
                     </article>
-                    <article class="row" id="Nauka">
+                    <article class="row p-5" id="Nauka">
                         <header class="col-12 p-1 text-center">
                             <h2 class="text-my3">
-                                Nauka
+                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-book" viewBox="0 1 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                              </svg>
+                              Edukacja
                             </h2>
                             <hr class="text-my3"/>
                         </header>
                         <section class="col-md-6 p-1 text-center">
-                            <p><h3><b>Dane kontaktowe</b></h3></p>
+                            <p><h3><b>Szkoła średnia</b></h3></p>
                             <p>
-                                <text class="text-my3">E-mail </text>: dawidflorian99@gmail.com
-                                <text class="text-my3"><br />Telefon </text>: 532 645 060
+                                <text class="text-my3">Zespół szkół ponadgimnazjalnych nr. 5 w Krośnie</text>
+                                <p>Technikum informatyczne</p>
                             </p>
                         </section>
                         <section class="col-md-6 p-1 text-center">
-                            <p><h3><b>Dane kontaktowe</b></h3></p>
+                            <p><h3><b>Szkoła wyższa</b></h3></p>
                             <p>
-                                <text class="text-my3">E-mail </text>: dawidflorian99@gmail.com
-                                <text class="text-my3"><br />Telefon </text>: 532 645 060
+                                <text class="text-my3">Politechnika Rzeszowska im. Ignacego Łukasiewicza.</text>
+                                <p>Studia informatyczne</p>
+                            </p>
+                        </section>
+                        <section class="col-12 p-1 text-center">
+                            <p><h3><b>Własna nauka</b></h3></p>
+                            <p>
+                                <text class="text-my3">Wiele przerobionych kursów między innymi na platformie Udemy</text>
                             </p>
                         </section>
                     </article>
                     <article class="row m-1" id="Zainteresowania">
-                        <header class="col-12 p-3 bg-my1 text-center">
+                        <header class="col-12 p-5 bg-my1 text-center">
                             <h2 class="text-my3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-bicycle" viewBox="0 1 16 16">
                                     <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
@@ -212,7 +216,7 @@
                         </section>
                     </article>
                     <article class="row p-1 pt-5" id="Kontakt">
-                        <header class="col-12 p-1 text-center">
+                        <header class="col-12 p-5 text-center">
                             <h2 class="text-my3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-envelope" viewBox="0 1 16 16">
                                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
